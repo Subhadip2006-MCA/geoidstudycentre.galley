@@ -4,6 +4,10 @@
 
 const photos = [
    {
+      src: "https://geoidstudycentre.pages.dev/Image%202.jpeg",
+      title: "Teachers' day 2026"
+   },
+   {
       src: "https://geoidstudycentre.pages.dev/Image%201.jpeg",
       title: "Teachers' Day 2026" },
    
