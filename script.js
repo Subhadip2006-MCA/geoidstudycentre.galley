@@ -3,7 +3,10 @@
 ========================================= */
 
 const photos = [
-
+   {
+      src: "https://geoidstudycentre.pages.dev/Image%201.jpeg",
+      title: "Teachers' Day 2026" },
+   
     {
         src: "https://ik.imagekit.io/18itosdvc/P-1.jpeg",
         title: "Photo GSC"
