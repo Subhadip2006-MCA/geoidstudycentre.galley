@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Geoid Study Centre</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="header-content">
+
+            <div class="logo">
+                <i class="fa-solid fa-photo-film"></i>
+                <span>Geoid Study Centre</span>
+            </div>
+
+            <a href="https://geoidstudycentre.pages.dev" class="home-btn">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- Main -->
+    <main class="container">
+
+        <div class="page-title">
+            <h1>Photos / Videos</h1>
+            <p>Explore our photos and videos</p>
+        </div>
+
+
+        <!-- Tabs -->
+        <div class="tabs">
+
+            <button class="tab active" data-tab="photos">
+                <i class="fa-solid fa-images"></i>
+                Photos
+            </button>
+
+            <button class="tab" data-tab="videos">
+                <i class="fa-solid fa-video"></i>
+                Videos
+            </button>
+
+        </div>
+
+
+        <!-- Photos -->
+        <section id="photos" class="media-section active">
+
+            <div class="section-heading">
+                <h2>Photo Gallery</h2>
+                <span id="photoCount">0 Photos</span>
+            </div>
+
+            <div id="photoGallery" class="photo-grid"></div>
+
+        </section>
+
+
+        <!-- Videos -->
+        <section id="videos" class="media-section">
+
+            <div class="section-heading">
+                <h2>Video Gallery</h2>
+                <span id="videoCount">0 Videos</span>
+            </div>
+
+            <div id="videoGallery" class="video-grid"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Image Viewer -->
+    <div id="imageModal" class="modal">
+
+        <button class="close-modal" id="closeImage">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <img id="modalImage" src="" alt="Preview">
+
+        <div id="imageCaption" class="caption"></div>
+
+    </div>
+
+
+    <!-- Video Viewer -->
+    <div id="videoModal" class="modal">
+
+        <button class="close-modal" id="closeVideo">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <video id="modalVideo" controls></video>
+
+        <div id="videoCaption" class="caption"></div>
+
+    </div>
+
+
+    <footer>
+        <p>© 2026 Geoid Study centre. All Rights Reserved.</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

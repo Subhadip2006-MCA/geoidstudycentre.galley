@@ -1,0 +1,487 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.logo i {
+    font-size: 24px;
+}
+
+.home-btn {
+    text-decoration: none;
+    color: #222;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 16px;
+
+    border: 1px solid #ddd;
+    border-radius: 7px;
+
+    transition: 0.2s;
+}
+
+.home-btn:hover {
+    background: #f0f0f0;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 45px 25px;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-title h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.page-title p {
+    color: #777;
+}
+
+
+/* =========================
+   TABS
+========================= */
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    margin-bottom: 35px;
+}
+
+.tab {
+    border: 1px solid #ddd;
+    background: #fff;
+
+    padding: 12px 25px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    transition: 0.2s;
+}
+
+.tab:hover {
+    background: #f0f0f0;
+}
+
+.tab.active {
+    background: #222;
+    color: #fff;
+    border-color: #222;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.media-section {
+    display: none;
+}
+
+.media-section.active {
+    display: block;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+.section-heading h2 {
+    font-size: 22px;
+}
+
+.section-heading span {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* =========================
+   PHOTO GRID
+========================= */
+
+.photo-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.photo-card {
+    position: relative;
+
+    background: #fff;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    aspect-ratio: 4 / 3;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+
+    transition: 0.25s;
+}
+
+.photo-card:hover {
+    transform: translateY(-4px);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================
+   VIDEO GRID
+========================= */
+
+.video-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.video-card {
+    background: #fff;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+.video-thumbnail {
+    position: relative;
+
+    aspect-ratio: 16 / 9;
+
+    background: #111;
+
+    cursor: pointer;
+
+    overflow: hidden;
+}
+
+.video-thumbnail video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.play-button {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+
+    pointer-events: none;
+}
+
+.video-title {
+    padding: 14px;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   EMPTY MESSAGE
+========================= */
+
+.empty-message {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+    color: #888;
+}
+
+.empty-message i {
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+
+.empty-message p {
+    font-size: 16px;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 999;
+
+    background: rgba(0, 0, 0, 0.92);
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal img {
+    max-width: 92%;
+    max-height: 85vh;
+
+    object-fit: contain;
+
+    border-radius: 5px;
+}
+
+.modal video {
+    width: min(100%, 1000px);
+
+    max-height: 80vh;
+
+    background: #000;
+}
+
+.close-modal {
+    position: absolute;
+
+    right: 25px;
+    top: 20px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.15);
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.caption {
+    position: absolute;
+
+    bottom: 20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: white;
+
+    font-size: 15px;
+
+    text-align: center;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    color: #777;
+
+    border-top: 1px solid #ddd;
+
+    margin-top: 40px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .photo-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .header-content {
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .home-btn {
+        padding: 8px 11px;
+        font-size: 13px;
+    }
+
+    .container {
+        padding: 30px 15px;
+    }
+
+    .page-title h1 {
+        font-size: 27px;
+    }
+
+    .tabs {
+        width: 100%;
+    }
+
+    .tab {
+        flex: 1;
+        justify-content: center;
+        padding: 11px;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .section-heading h2 {
+        font-size: 19px;
+    }
+
+    .modal {
+        padding: 15px;
+    }
+
+    .modal img {
+        max-width: 100%;
+    }
+
+}
